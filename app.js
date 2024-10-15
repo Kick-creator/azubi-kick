@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Zugriff auf das content-Div und Einfügen eines Buttons
     const contentDiv = document.getElementById('content');
     
     contentDiv.innerHTML = `
@@ -6,7 +7,13 @@ document.addEventListener('DOMContentLoaded', function() {
         <button id="startBtn">Starte ein neues Turnier</button>
     `;
     
-    document.getElementById('startBtn').addEventListener('click', function() {
-        alert('Turnier gestartet!');
-    });
+    // Überprüfen, ob der Button existiert und einen Event-Listener hinzufügen
+    const startBtn = document.getElementById('startBtn');
+    if (startBtn) {
+        startBtn.addEventListener('click', function() {
+            alert('Turnier gestartet!');
+        });
+    } else {
+        console.error('Button konnte nicht gefunden werden');
+    }
 });
