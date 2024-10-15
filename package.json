@@ -1,1 +1,13 @@
+{
+  "name": "azubi-kick-backend",
+  "version": "1.0.0",
+  "description": "Backend for Azubi-Kick",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
 
