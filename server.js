@@ -14,3 +14,9 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
     console.log(`Server läuft auf Port ${port}`);
 });
+app.post('/api/tournaments', (req, res) => {
+    const tournament = req.body;
+    console.log('Turnier erhalten:', tournament);
+    // Hier könnten wir die Daten speichern (z.B. in einer Datenbank)
+    res.status(201).send({ message: 'Turnier erfolgreich erstellt', tournament });
+});
